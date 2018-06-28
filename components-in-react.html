@@ -23,12 +23,14 @@
 <body>
     <div id="container"></div>
     <script type="text/babel">
+        class HelloWorld extends React.Component{
+            render() {
+                return <p>Hello, {this.props.greetTarget}</p>
+            }
+        }
         ReactDOM.render(
             <div>
-                <h1>Batman</h1>
-                <h1>Iron Man</h1>
-                <h1>Nicolas Cage</h1>
-                <h1>Mega Man</h1>
+                <HelloWorld greetTarget='Batman'/>
             </div>,
             document.querySelector("#container")
         );
